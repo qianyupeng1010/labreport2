@@ -148,9 +148,9 @@ public class ArrayExamples {
 }
 ```
 
-Before fixing, the for loop first swap the first element with the last element in array. For example, in an array of 3 element '''{1,2,3}''', 
-`arr[0]= arr[2]` will make the array look like '''{3,2,3}'''. But when the iteration reach the end of the array `arr[2]`, it makes 
-`arr[2] = arr[0]` But here we already changed the value stored in `arr[0]`, so `arr[2]=arr[0]` will make the array look like '''{3,2,3}''', which cause the failure in Junit test showed in previous screenshot.
+Before fixing, the for loop first swap the first element with the last element in array. For example, in an array of 3 element `{1,2,3}`, 
+`arr[0]= arr[2]` will make the array look like `{3,2,3}`. But when the iteration reach the end of the array `arr[2]`, it makes 
+`arr[2] = arr[0]` But here we already changed the value stored in `arr[0]`, so `arr[2]=arr[0]` will make the array look like `{3,2,3}`, which cause the failure in Junit test showed in previous screenshot.
 
 Oops! We do not want to change the value stored in the first half of the array when we reverse in place the second half of the array, otherwise the value we want in the second half of the array does not change! To do this, we can creat a ```int temp```  and make it equal to ```arr[i]``` in the for-loop body to store the value of first half of the array. Also we can make the array iterate only to the middle of the array, so the fisrt half of the array will be reversed with the second half. To do this we revise the loop condition to be ```i < arr.length/2``` .  since the loop only iterate to the middle of the array, so the reverse in palce the second half of the array, we use ```arr[arr.length - i - 1] = temp``` to let the value of second half of the array equal to temp which is the original value of the first half. This way, all the elements in the array are reversed in place.<br>
 Here is a screenshot of the running test and terminal output after we fix the bug:<br>
