@@ -105,6 +105,7 @@ public void testReverseInPlace2() {
 ```
 
 2. This is an input that doesn't include a failure:
+
 ```
 import static org.junit.Assert.*;
 import org.junit.*;
@@ -118,6 +119,7 @@ public void testReverseInPlace() {
 }
 }
 ```
+
 3. This is the symptom, as the out put of running the test above:<br>
 <img width="691" alt="截屏2023-04-24 下午5 07 22" src="https://user-images.githubusercontent.com/130001791/234140992-368cabaa-acd1-4bed-995c-c417c6f2030a.png">
 4. This is the bug:<br>
