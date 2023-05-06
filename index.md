@@ -154,7 +154,8 @@ Before fixing, the for loop first swap the first element with the last element i
 
 Oops! We do not want to change the value stored in the first half of the array when we reverse in place the second half of the array, otherwise the value we want in the second half of the array does not change! To do this, we can creat a `int temp`  and make it equal to `arr[i]` in the for-loop body to store the value of first half of the array. Also we can make the array iterate only to the middle of the array, so the fisrt half of the array will be reversed with the second half. To do this we revise the loop condition to be `i < arr.length/2` .  since the loop only iterate to the middle of the array, so the reverse in palce the second half of the array, we use `arr[arr.length - i - 1] = temp` to let the value of second half of the array equal to temp which is the original value of the first half. This way, all the elements in the array are reversed in place.<br>
 Here is a screenshot of the running test and terminal output after we fix the bug:<br>
-<img width="696" alt="截屏2023-05-06 下午12 07 56" src="https://user-images.githubusercontent.com/130001791/236642402-090aaf14-07d9-464e-953e-263eb1fdcf32.png">
+
+<img width="717" alt="截屏2023-05-06 下午12 21 24" src="https://user-images.githubusercontent.com/130001791/236642897-8bd551ef-5e1a-4895-8650-9441787002fc.png">
 
 
 ## Part 3
